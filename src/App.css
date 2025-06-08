@@ -2,37 +2,101 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.social-icons {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  align-items: flex-start; 
+}
+
+.social-icons a {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: lightgrey;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons a svg {
+  margin-right: 8px; 
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
+.social-icons a:hover {
+  color: pink; 
+}
+
+.typing-effect {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff420, #ff0ad6); /* pretty gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border-right: 2px solid #ff6ec4; /* cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10ch; 
+  animation: 
+    type 4s steps(10) forwards, /* typing effect */
+    blink 0.7s step-end infinite; /* blinking cursor */
+}
+
+@keyframes type {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 6ch; 
   }
 }
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.project-card {
+  display: block;
+  background: #1e1e1e;
+  color: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.114);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(246, 121, 177, 0.461);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+}
+.project-card p{
+  font-size: 17px;
+}
+.tech-stack {
+  margin-bottom: 10px;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #3a011e;
+  color: lightgray;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+
+
