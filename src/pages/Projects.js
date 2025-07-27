@@ -57,6 +57,7 @@ const Projects = () => {
           overflow: hidden !important;
           padding: 0.5rem !important;
           margin: 0 !important;
+          margin-bottom: 2rem;
         }
         .project-card h3 {
           font-size: 1rem !important;
