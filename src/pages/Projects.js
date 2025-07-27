@@ -9,6 +9,13 @@ const projects = [
     github: 'https://github.com/bwbeas/huamemo',
     techStack: ['MERN'],
   },
+  {
+    title: '🫧 beadoodle',
+    description: 'draw customized filter stickers on your images!',
+    link: 'https://beadoodle.vercel.app/',
+    github: 'https://github.com/bwbeas/beadoodle',
+    techStack: ['React'],
+  }
   
 ];
 
